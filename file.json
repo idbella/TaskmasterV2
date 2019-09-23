@@ -1,11 +1,11 @@
 [
 	{
 		"name" : "nginx",
-		"cmd": "/usr/local/bin/nginx -c /etc/nginx/test.conf",
+		"cmd": "a.out",
 		"numprocs": 1,
-		"umask": 22,
+		"umask": 644,
 		"workingdir": "/tmp",
-		"autostart": true,
+		"autostart": false,
 		"autorestart": "unexpected",
 		"exitcodes":
 		[
@@ -17,8 +17,8 @@
 		"starttime": 5,
 		"stopsignal": "TERM",
 		"stoptime": 10,
-		"stdout": "/tmp/nginx.stdout",
-		"stderr": "/tmp/nginx.stderr",
+		"stdout": "nginx.stdout",
+		"stderr": "nginx.stderr",
 		"env":[
 			{
 				"key":"STARTED_BY",
@@ -27,8 +27,7 @@
 			{
 				"key":"ANSWER",
 				"value":42
-			}        
+			}
 		]
 	}
 ]
-

@@ -6,7 +6,7 @@
 /*   By: sid-bell <sid-bell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/21 00:48:13 by sid-bell          #+#    #+#             */
-/*   Updated: 2019/09/21 01:49:39 by sid-bell         ###   ########.fr       */
+/*   Updated: 2019/09/21 19:38:25 by sid-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 char	ft_isvalid(t_entry *entry, t_jsobject *js, enum json_type type)
 {
-	int b;
-
-	b = 0;
 	if (ft_strequ(entry->name, "autostart")
 		&& json_object_get_type(js) == json_type_boolean)
 		return (1);
