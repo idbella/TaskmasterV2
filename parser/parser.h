@@ -6,7 +6,7 @@
 /*   By: sid-bell <sid-bell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 14:09:08 by sid-bell          #+#    #+#             */
-/*   Updated: 2019/09/23 14:25:14 by sid-bell         ###   ########.fr       */
+/*   Updated: 2019/09/23 15:37:44 by sid-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PARSER_H
 # include "libft/libft.h"
 # include <fcntl.h>
-# include "/Users/sid-bell/.brew/include/json-c/json.h"
+# include "json.h"
 # include <time.h>
 # define REQ_OK 1
 # define REQ_NO 0
