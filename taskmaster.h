@@ -6,7 +6,7 @@
 /*   By: sid-bell <sid-bell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/21 15:07:23 by sid-bell          #+#    #+#             */
-/*   Updated: 2019/09/23 15:35:36 by sid-bell         ###   ########.fr       */
+/*   Updated: 2019/09/23 21:35:17 by sid-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void	ft_start(t_app *app, t_params *params);
 void	ft_stop(t_app *app, t_params *params);
 void	ft_status(t_app *app, t_params *params);
 void    ft_reload(char *file);
+void	ft_sigchild(int sig);
 #endif

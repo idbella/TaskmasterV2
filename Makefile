@@ -6,14 +6,13 @@
 #    By: sid-bell <sid-bell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/21 14:12:48 by sid-bell          #+#    #+#              #
-#    Updated: 2019/09/23 15:42:10 by sid-bell         ###   ########.fr        #
+#    Updated: 2019/09/23 21:36:54 by sid-bell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-HOME = $(echo ~)
-LIB=libft/libft.a ~/.brew/Cellar/json-c/0.13.1/lib/libjson-c.a  -I. -I$(HOME)/.brew/include/json-c
+LIB=libft/libft.a json-c/lib/libjson-c.a  -I. -Ilibft -Ijson-c/include/json-c
 
-SRC	= main.c\
+SRC	= main.c signal.c\
 $(patsubst %.c, builtins/%.c,\
 ft_start.c\
 ft_stop.c\

@@ -1,7 +1,7 @@
 [
 	{
 		"name" : "nginx",
-		"cmd": "a.out",
+		"cmd": "/Users/sid-bell/Desktop/taskmaster/a.out",
 		"numprocs": 1,
 		"umask": 644,
 		"workingdir": "/tmp",
@@ -18,7 +18,6 @@
 		"stopsignal": "TERM",
 		"stoptime": 10,
 		"stdout": "nginx.stdout",
-		"stderr": "nginx.stderr",
 		"env":[
 			{
 				"key":"STARTED_BY",

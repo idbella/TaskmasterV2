@@ -6,7 +6,7 @@
 /*   By: sid-bell <sid-bell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/21 15:06:34 by sid-bell          #+#    #+#             */
-/*   Updated: 2019/09/23 13:39:56 by sid-bell         ###   ########.fr       */
+/*   Updated: 2019/09/23 23:09:06 by sid-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_init(t_params *params)
 	params->entrys = NULL;
 	params->apps = NULL;
 	ft_fill_entrys(params);
+	signal(SIGCHLD, ft_sigchild);
 }
 
 void ft_restart(t_app *app)
@@ -113,7 +114,6 @@ void	ft_daemon()
 		close(0);
 		close(1);
 		close(2);
-		ft_printf_fd(1, "hahahah\n");
 	}
 	else
 		exit(0);

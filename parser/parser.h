@@ -6,13 +6,13 @@
 /*   By: sid-bell <sid-bell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 14:09:08 by sid-bell          #+#    #+#             */
-/*   Updated: 2019/09/23 15:37:44 by sid-bell         ###   ########.fr       */
+/*   Updated: 2019/09/23 18:46:27 by sid-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PARSER_H
 # define PARSER_H
-# include "libft/libft.h"
+# include "libft.h"
 # include <fcntl.h>
 # include "json.h"
 # include <time.h>
