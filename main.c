@@ -13,7 +13,7 @@
 #include "taskmaster.h"
 #define NAME "SOCK"
 
-void	ft_init(t_params *params)
+static void	ft_init(t_params *params)
 {
 	params->logfile = open("log", O_WRONLY|O_CREAT|O_APPEND, 0644);
 	params->entrys = NULL;

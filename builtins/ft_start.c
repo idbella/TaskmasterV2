@@ -64,6 +64,7 @@ void	ft_start(t_app *app, t_params *params)
 			chdir(app->wdir);
 		env = ft_envtoarr(app->env);
 		execve(app->argv[0], app->argv, env);
+		exit(1);
 	}
 	app->status = RUNNING;
 	app->pid = pid;

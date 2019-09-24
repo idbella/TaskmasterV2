@@ -10,8 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-HOME = $(echo ~)
-LIB=libft/libft.a ~/.brew/Cellar/json-c/0.13.1/lib/libjson-c.a  -I. -I$(HOME)/.brew/include/json-c
+JSLIB = /USERS/hlamhidr/.brew/Cellar/json-c/0.13.1/lib/libjson-c.a -I /USERS/hlamhidr/.brew/include/json-c
+LIB=libft/libft.a -I. -Ilibft/
 
 SRC	= main.c\
 $(patsubst %.c, builtins/%.c,\
@@ -32,6 +32,32 @@ ft_newapp.c\
 ft_sigstr.c\
 ft_loadjson.c)
 
+SRC2 = $(patsubst %.c, read_line/%.c,\
+addition.c\
+auto_completion.c\
+clear_line_or_window.c\
+clear_readline.c\
+copy_paste.c\
+ctrl_d.c\
+cut.c\
+delete.c\
+ft_read_line.c\
+heredoc_line.c\
+history.c\
+home_end.c\
+initial.c\
+move_by_lines.c\
+move_by_word.c\
+moving_cursor.c\
+output.c\
+quotes.c\
+reset_position.c\
+selection1.c\
+selection2.c\
+termcap.c\
+append.c)
+
 all:
-	gcc $(SRC) $(LIB) -o taskmasterd
-	gcc client.c -o taskmasterctl libft/libft.a
+	gcc $(SRC) $(JSLIB) $(LIB) -o taskmasterd  -ltermcap
+	gcc client.c $(SRC2) $(LIB) -o taskmasterctl libft/libft.a -ltermcap
+
